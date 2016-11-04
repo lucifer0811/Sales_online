@@ -3,9 +3,10 @@
     <%= link_to t("layout.header.name_app"), '#', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("layout.header.home"), "#" %></li>
-        <li><%= link_to t("layout.header.help"), "#" %></li>
-        <li><%= link_to t("layout.header.login"), "#" %></li>
+        <li><%= link_to t("layout.header.home"), root_path %></li>
+        <li><%= link_to t("layout.header.help"), static_pages_help_path %></li>
+        <li><%= link_to t("layout.header.login"), new_user_session_path %></li>
+        <li><%= link_to t("layout.header.signup"), new_user_registration_path %></li>
       </ul>
     </nav>
   </div>
