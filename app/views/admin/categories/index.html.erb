@@ -1,0 +1,24 @@
+<div class="container">
+  <h2><%= t "views.admin.category.all_category" %></h2>
+
+  <div class="well">
+    <%= link_to t("views.admin.category.new"), new_admin_category_path,
+      remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-category"></div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th><%= t "views.admin.category.name"%></th>
+        <th><%= t "views.admin.category.action"%></th>
+      </tr>
+    </thead>
+    <tbody id="categories">
+      <%= render @categories %>
+    </tbody>
+  </table>
+  <%= will_paginate %>
+
+  <%= render "dialog" %>
+</div>

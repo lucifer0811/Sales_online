@@ -11,3 +11,11 @@ User.create!(name:  "admin",
   password_confirmation: "123456",
   admin: true
 )
+
+11.times do |n|
+  name = Faker::Name.name
+  descriptions  = "abc-#{n+1}-cba"
+  number = Faker::Number.digit
+  Category.create!(name: name,
+    description: descriptions)
+end

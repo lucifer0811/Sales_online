@@ -1,0 +1,8 @@
+<tr id="category_<%= category.id %>">
+  <td><%= category.name %></td>
+  <td>
+    <%= link_to t("views.admin.category.edit"), edit_admin_category_path(category),
+      remote: true, class: "btn btn-sm btn-info" %>
+    <%= link_to t("views.admin.category.delete"), [:admin, category], remote: true, method: :delete, data: {confirm: t("views.admin.category.confirm")}, class: "btn btn-sm btn-danger" %>
+  </td>
+</tr>
