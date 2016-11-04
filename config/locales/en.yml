@@ -21,7 +21,8 @@
 
 en:
   app:
-    name: STOREONLINE
+    name: "STOREONLINE"
+    design: "Phan Nguyen"
   hello: "Hello world"
   layout:
     header:
@@ -35,3 +36,17 @@ en:
       about: "About"
       contact: "Contact"
       new: "News"
+      text: "Website created by"
+  views:
+    admin:
+      category:
+        all_category: "List Category"
+        new: "NEW"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure!!!!"
+        create: "Create"
+        update: "Update"
+        action: "Action"
+        name: "Name"
+        stt: "STT"
