@@ -7,6 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.datetime :birth_day
       t.string :phone_number
       t.string :avatar
+      t.boolean :admin
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
