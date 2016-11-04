@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  app:
+    name: STOREONLINE
   hello: "Hello world"
+  layout:
+    header:
+      name_app: "StoreOnline"
+      home: "Home"
+      help: "Help"
+      login: "Login"
+    footer:
+      about: "About"
+      contact: "Contact"
+      new: "News"
