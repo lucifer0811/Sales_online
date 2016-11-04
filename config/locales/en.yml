@@ -30,6 +30,7 @@ en:
       help: "Help"
       login: "Login"
       signup: "Signup"
+      category: "Category"
     footer:
       about: "About"
       contact: "Contact"

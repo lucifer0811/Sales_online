@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20161103034812) do
     t.datetime "birth_day"
     t.string   "phone_number"
     t.string   "avatar"
+    t.boolean  "admin"
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
