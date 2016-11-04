@@ -9,6 +9,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-image: url("image1.jpg");
 }
 
 section {
@@ -95,4 +96,18 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+#new_user, #edit_user {
+  .title_new_user {
+    border: 1px solid #e7e7e7;
+    background: #e7e7e7;
+  }
+  width: 450px;
+  height: auto;
+  background-color: #e7e7e7;
+  border: 1px ridge #e7e7e7;
+  margin: 3%;
+  margin-left: 350px;
+  padding: 3%;
 }

@@ -29,6 +29,7 @@ en:
       home: "Home"
       help: "Help"
       login: "Login"
+      signup: "Signup"
     footer:
       about: "About"
       contact: "Contact"
