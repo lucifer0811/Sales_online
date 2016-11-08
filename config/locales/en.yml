@@ -23,6 +23,8 @@ en:
   app:
     name: "STOREONLINE"
     design: "Phan Nguyen"
+    dollar: "$"
+    percent: "%"
   hello: "Hello world"
   layout:
     header:
@@ -32,6 +34,7 @@ en:
       login: "Login"
       signup: "Signup"
       category: "Category"
+      product: "Product"
     footer:
       about: "About"
       contact: "Contact"
@@ -50,3 +53,11 @@ en:
         action: "Action"
         name: "Name"
         stt: "STT"
+      product:
+        name: "Name"
+        price: "Price"
+        sale_off: "Sale Off"
+        action: "Action"
+        create: "Create"
+        update: "Update"
+        all_product: "List Product"

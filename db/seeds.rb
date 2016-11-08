@@ -19,3 +19,17 @@ User.create!(name:  "admin",
   Category.create!(name: name,
     description: descriptions)
 end
+
+12.times do |n|
+  name = Faker::Name.name
+  category = Faker::Number.between 1, 10
+  price = Faker::Number.decimal(3, 3)
+  sale_off = Faker::Number.between(0, 50)
+  description = Faker::Lorem.paragraphs.join(' ')
+  Product.create!(name: name,
+    description: description,
+    price: price,
+    sale_off: sale_off,
+    category_id: category
+  )
+end
