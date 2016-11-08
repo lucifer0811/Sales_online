@@ -1,10 +1,12 @@
-<tr>
+<tr id="product_<%= product.id %>">
   <td><%= product.name %></td>
   <td><%= product.price %><%= t "app.dollar" %></td>
   <td><%= product.sale_off %><%= t "app.percent" %></td>
   <td>
-    <%= link_to t("views.admin.category.edit"), "#",
+    <%= link_to t("views.admin.product.edit"), edit_admin_product_path(product),
       remote: true, class: "btn btn-sm btn-info" %>
-    <%= link_to t("views.admin.category.delete"), "#", remote: true, method: :delete, data: {confirm: t("views.admin.category.confirm")}, class: "btn btn-sm btn-danger" %>
+    <%= link_to t("views.admin.product.delete"), [:admin, product], remote: true,
+      method: :delete, data: {confirm: t("views.admin.product.confirm")},
+      class: "btn btn-sm btn-danger" %>
   </td>
 </tr>

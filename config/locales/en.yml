@@ -56,6 +56,10 @@ en:
       product:
         name: "Name"
         price: "Price"
+        new: "NEW"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure!!!!"
         sale_off: "Sale Off"
         action: "Action"
         create: "Create"
