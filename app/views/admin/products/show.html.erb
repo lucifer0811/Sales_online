@@ -1,0 +1,11 @@
+<%= t "views.admin.product.show"%><%= @product.name %>
+<div class="row">
+  <div class="col-md-6" id="comment-count">
+    <%= t "views.admin.product.comment" %>(<%= @product.comments.size %>)
+  </div>
+  <div class="col-md-6">
+    <div class="comment_form">
+      <%= render "admin/comments/form" %>
+    </div>
+  </div>
+</div>

@@ -26,3 +26,4 @@ $(document).ajaxError(function(event, xhr, options, exc){
   er += "</ul>"
   $("#error_explanation").html(er);
 });
+

@@ -65,3 +65,6 @@ en:
         create: "Create"
         update: "Update"
         all_product: "List Product"
+        show: "Information for product: "
+        comment: "Comments"
+        add_comment: "Comment"
