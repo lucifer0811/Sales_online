@@ -27,6 +27,11 @@ gem "ransack"
 gem "will_paginate"
 gem "config"
 gem "faker"
+gem "carrierwave"
+# gem "cloudinary"
+gem "mini_magick"
+gem "remotipart", "~> 1.2"
+gem "jquery-form-rails"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem "sdoc", "~> 0.4.0", group: :doc
 
