@@ -1,5 +1,5 @@
 <tr id="product_<%= product.id %>">
-  <td><%= product.name %></td>
+  <td><%= link_to product.name, admin_product_path(product) %></td>
   <td><%= product.price %><%= t "app.dollar" %></td>
   <td><%= product.sale_off %><%= t "app.percent" %></td>
   <td>

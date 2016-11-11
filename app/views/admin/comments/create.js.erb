@@ -1,0 +1,4 @@
+$('.comments').prepend('<%= j render('admin/comments/comment', comment: @comment) %>')
+$('#comment_content').val('')
+$('#comment_content').focus()
+$('#comment-count').html('<%= j render partial: "admin/comments/comment_header" %>')

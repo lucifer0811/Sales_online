@@ -1,0 +1,16 @@
+<%= form_for [:admin, @product, @product.comments.build], remote: true do |f| %>
+<div id="error_explanation" class="bg-danger text-danger">
+</div>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="form-group">
+      <%= f.label :content, class: "control-label" %>
+      <%= f.text_field :content, class: "form-control first_input",id: "comment_content" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit @comment.new_record? ? t("views.admin.product.create") :
+        t("views.admin.product.update"), class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+<% end %>

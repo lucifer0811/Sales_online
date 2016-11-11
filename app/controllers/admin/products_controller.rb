@@ -23,6 +23,11 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
+  def show
+    @comments = @product.comments.order("created_at DESC")
+    @comment = Comment.new
+  end
+
   def edit
   end
 

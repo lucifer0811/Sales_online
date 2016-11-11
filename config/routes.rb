@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :categories
-    resources :products
+    resources :products do
+      resources :comments
+    end
     resources :users, only: [:index, :destroy]
   end
 
