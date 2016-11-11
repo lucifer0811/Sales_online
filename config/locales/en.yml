@@ -53,6 +53,7 @@ en:
         action: "Action"
         name: "Name"
         stt: "STT"
+        image: "Image"
       product:
         name: "Name"
         price: "Price"

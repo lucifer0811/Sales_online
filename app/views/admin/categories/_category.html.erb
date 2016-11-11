@@ -1,4 +1,5 @@
 <tr id="category_<%= category.id %>">
+  <td><%= image_tag(category.image, size: "50x50")%></td>
   <td><%= category.name %></td>
   <td>
     <%= link_to t("views.admin.category.edit"), edit_admin_category_path(category),
