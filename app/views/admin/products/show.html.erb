@@ -1,11 +1,17 @@
 <%= t "views.admin.product.show"%><%= @product.name %>
 <div class="row">
-  <div class="col-md-6" id="comment-count">
-    <%= t "views.admin.product.comment" %>(<%= @product.comments.size %>)
-  </div>
-  <div class="col-md-6">
+  <div class="col-md-8">
+    <div id="comment-count">
+      <%= render "admin/comments/comment_header" %>
+    </div>
     <div class="comment_form">
       <%= render "admin/comments/form" %>
     </div>
+  </div>
+  <div class="col-md-4">
+    <div class="comments">
+      <%= render @comments %>
+    </div>
+    </br>
   </div>
 </div>

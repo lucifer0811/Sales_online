@@ -54,7 +54,6 @@ p {
   line-height: 1.7em;
 }
 
-
 /* header */
 
 #logo {
@@ -110,4 +109,11 @@ footer {
   margin: 3%;
   margin-left: 350px;
   padding: 3%;
+}
+
+.comment {
+  float: left;
+  .content_comment {
+    border-top: 1px solid #e8e8e8;
+  }
 }
