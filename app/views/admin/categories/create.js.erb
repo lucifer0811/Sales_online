@@ -1,2 +1,8 @@
-$('#dialog').modal('toggle');
-$('#categories').prepend('<%= j render (@category) %>')
+<% if @category.invalid? %>
+  $('.category-errors').html('<%= j render "shared/error_messages",
+    object: @category %>');
+  $('.category-errors').delay(5000).slideUp();
+<% else %>
+  $('#dialog').modal('toggle');
+  $('#categories').prepend('<%= j render (@category) %>')
+<% end %>

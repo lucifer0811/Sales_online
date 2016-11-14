@@ -18,7 +18,9 @@ class Admin::CategoriesController < ApplicationController
       if @category.save
         format.json {head :no_content}
         format.js
+        format.html
       else
+        format.js
         format.json {render json: @category.errors.full_messages,
           status: :unprocessable_entity}
       end
@@ -34,6 +36,7 @@ class Admin::CategoriesController < ApplicationController
         format.json {head :no_content}
         format.js
       else
+        format.js
         format.json {render json: @category.errors.full_messages,
           status: :unprocessable_entity}
       end
