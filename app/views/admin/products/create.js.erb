@@ -1,2 +1,8 @@
-$('#dialog').modal('toggle');
-$('#products').prepend('<%= j render (@product) %>')
+<% if @product.invalid? %>
+  $('.product-errors').html('<%= j render "shared/error_messages",
+    object: @product %>');
+  $('.product-errors').delay(5000).slideUp();
+<% else %>
+  $('#dialog').modal('toggle');
+  $('#products').prepend('<%= j render (@product) %>')
+<% end %>

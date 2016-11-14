@@ -32,9 +32,12 @@ en:
       home: "Home"
       help: "Help"
       login: "Login"
+      logout: "Logout"
       signup: "Signup"
       category: "Category"
+      update: "Update information"
       product: "Product"
+      profile: "Profile"
     footer:
       about: "About"
       contact: "Contact"

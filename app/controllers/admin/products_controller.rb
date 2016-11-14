@@ -16,7 +16,11 @@ class Admin::ProductsController < ApplicationController
       if @product.save
         format.json {head :no_content}
         format.js
+        format.html do
+          redirect_to admin_products_path
+        end
       else
+        format.js
         format.json {render json: @product.errors.full_messages,
           status: :unprocessable_entity}
       end
@@ -37,6 +41,7 @@ class Admin::ProductsController < ApplicationController
         format.json {head :no_content}
         format.json
       else
+        format.js
         format.json {render json: @product.errors.full_messages,
           status: :unprocessable_entity}
       end
