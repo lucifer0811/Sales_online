@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20161103034812) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "image_products", force: :cascade do |t|
+    t.string   "image"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "image_products", ["product_id"], name: "index_image_products_on_product_id"
+
   create_table "line_items", force: :cascade do |t|
     t.integer  "quantity"
     t.decimal  "price"

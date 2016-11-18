@@ -1,4 +1,4 @@
-<%= form_for [:admin, @product], remote: true do |f| %>
+<%= form_for [:admin, @product], html: {multipart: true }, remote: true do |f| %>
   <div class="row">
     <div class="col-sm-6">
       <div class="product-errors">
@@ -24,6 +24,12 @@
         <%= f.collection_select :category_id, @categories, :id, :name,
           class: "form-control" %>
       </div>
+      <div class="image_products">
+        <%= f.fields_for :image_products do |attachment_form| %>
+          <%= render "image_product_fields", :f => attachment_form %>
+        <% end %>
+      </div>
+      <%= link_to_add_fields "Attach a file or an image", f, :image_products %>
       <div class="form-group">
         <%= f.submit @product.new_record? ? t("views.admin.product.create") :
           t("views.admin.product.update"), class: "btn btn-primary" %>
