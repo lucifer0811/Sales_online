@@ -3,17 +3,17 @@
     <%= link_to t("layout.header.name_app"), '#', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("layout.header.home"), admin_products_path %></li>
         <% if user_signed_in? %>
           <% if current_user.admin? %>
-          <li><%= link_to t("layout.header.request"), admin_requests_path %></li>
+            <li><%= link_to t("layout.header.request"), admin_requests_path %></li>
             <li><%= link_to t("layout.header.category"), admin_categories_path %></li>
             <li><%= link_to t("layout.header.product"), admin_products_path %></li>
           <% else %>
             <li><%= link_to t("layout.header.request"), requests_path %></li>
             <li><%= link_to t("layout.header.product"), products_path %></li>
+            <li><%= link_to t("layout.header.cart"), cart_path %></li>
           <% end %>
-            <li class="dropdown">
+          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <% if current_user.avatar.present? %>
                 <%= image_tag(current_user.avatar, size: "20") %>

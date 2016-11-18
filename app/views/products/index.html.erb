@@ -1,17 +1,36 @@
-<h2><p><%= t "views.products.all_product "%></p></h2>
-<%= link_to t("views.request.add"), new_request_path %>
-<div class="container">
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th><%= t "views.admin.product.name"%></th>
-        <th><%= t "views.admin.product.price" %></th>
-        <th><%= t "views.admin.product.sale_off" %></th>
-      </tr>
-    </thead>
-    <tbody id="products">
-      <%= render @products %>
-    </tbody>
-  </table>
-  <%= will_paginate %>
+<div class="row">
+  <div class="col-md-10" id="list_image">
+    <% @products.each do |item|%>
+      <div class="col-md-4 blog-main box text-center">
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <div class="row">
+              <div id="image_for_product">
+                <% if item.image_products.present? %>
+                  <%= image_tag(item.image_products.first.image, size: "220x240") %>
+                <% else %>
+                  <%= image_tag("backgroud_images.jpg", size: "220x240")%>
+                <% end %>
+                <br />
+                <div class="product_name">
+                  <%= t "product.name" %>: <b><%= item.name %></b><br>
+                  <%= t "product.price" %>: <%= t "app.dollar" %><%= item.price %>
+                </div>
+                <br><br>
+                <div class="cart">
+                  <div class="buy">
+                    <%= link_to t("product.buy"), "#" %>
+                  </div>
+                  <div class="add">
+                    <a href="cart/<%= item.id %>"><%= t "product.add_to_cart" %></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% will_paginate %>
 </div>
