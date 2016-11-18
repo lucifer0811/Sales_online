@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :products do
       resources :comments
+      resources :image_products
     end
     resources :users
   end

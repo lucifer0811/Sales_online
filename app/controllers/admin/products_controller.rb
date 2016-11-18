@@ -3,6 +3,7 @@ class Admin::ProductsController < ApplicationController
   before_action :load_categories, only: [:new, :create, :edit, :update]
 
   def new
+    @product.image_products.build
   end
 
   def index
@@ -20,9 +21,9 @@ class Admin::ProductsController < ApplicationController
           redirect_to admin_products_path
         end
       else
-        format.js
         format.json {render json: @product.errors.full_messages,
           status: :unprocessable_entity}
+        format.js
       end
     end
   end
@@ -39,7 +40,7 @@ class Admin::ProductsController < ApplicationController
     respond_to do |format|
       if @product.update_attributes product_params
         format.json {head :no_content}
-        format.json
+        format.js
       else
         format.js
         format.json {render json: @product.errors.full_messages,
@@ -64,6 +65,6 @@ class Admin::ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit :name, :price, :description, :category_id,
-      :sale_off
+      :sale_off, image_products_attributes: [:id, :product_id, :image]
   end
 end
