@@ -8,6 +8,10 @@
           <% if current_user.admin? %>
             <li><%= link_to t("layout.header.category"), admin_categories_path %></li>
             <li><%= link_to t("layout.header.product"), admin_products_path %></li>
+          <% else %>
+            <li><%= link_to t("layout.header.request"), requests_path %></li>
+            <li><%= link_to t("layout.header.product"), products_path %></li>
+          <% end %>
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <% if current_user.avatar.present? %>
@@ -24,13 +28,11 @@
               <li><%= link_to t("layout.header.profile"), current_user %></li>
               <li class="divider"></li>
               <li class="<%= "active" if current_page?(destroy_user_session_path)%>">
-              <%= link_to t("layout.header.logout"), destroy_user_session_path,
-                method: :delete %>
-            </li>
-          </ul>
-        </li>
-          <% else %>
-          <% end %>
+                <%= link_to t("layout.header.logout"), destroy_user_session_path,
+                  method: :delete %>
+              </li>
+            </ul>
+          </li>
         <% else %>
           <li><%= link_to t("layout.header.login"), new_user_session_path %></li>
           <li><%= link_to t("layout.header.signup"), new_user_registration_path %></li>

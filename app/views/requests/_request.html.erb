@@ -1,0 +1,21 @@
+<table id = "request-table" class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t "title.stt" %></th>
+      <th><%= t "request.content" %></th>
+      <th><%= t "request.status" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @requests.each_with_index do |request, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= request.product_name %></td>
+        <td>
+          <%= t request.is_approved ? "request.approved" :
+            "request.not_approved"%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

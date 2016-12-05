@@ -1,0 +1,17 @@
+<h2><p><%= t "views.products.all_product "%></p></h2>
+<%= link_to t("views.request.add"), new_request_path %>
+<div class="container">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th><%= t "views.admin.product.name"%></th>
+        <th><%= t "views.admin.product.price" %></th>
+        <th><%= t "views.admin.product.sale_off" %></th>
+      </tr>
+    </thead>
+    <tbody id="products">
+      <%= render @products %>
+    </tbody>
+  </table>
+  <%= will_paginate %>
+</div>
