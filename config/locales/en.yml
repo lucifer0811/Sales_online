@@ -38,6 +38,7 @@ en:
       update: "Update information"
       product: "Product"
       profile: "Profile"
+      request: "Request"
     footer:
       about: "About"
       contact: "Contact"
@@ -73,3 +74,12 @@ en:
         comment: "Comments"
         add_comment: "Comment"
         add: "Add Image"
+    request:
+      stt: "STT"
+      name: "User"
+      content: "Product Name"
+      status: "Status"
+      create: "Send"
+      created: "Request send to Admin"
+    products:
+      all_product: "Product List"

@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require bootstrap-sprockets
+//= require turbolinks
+//= require bootstrap
+//= require_tree .
 
 function remove_fields(link) {
   $(link).prev("input[type=hidden]").val("1");

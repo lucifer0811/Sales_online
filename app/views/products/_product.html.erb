@@ -1,0 +1,5 @@
+<tr id="product_<%= product.id %>">
+  <td><%= link_to product.name, product_path(product) %></td>
+  <td><%= product.price %><%= t "app.dollar" %></td>
+  <td><%= product.sale_off %><%= t "app.percent" %></td>
+</tr>

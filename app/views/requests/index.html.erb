@@ -1,0 +1,11 @@
+<div class="row">
+  <aside class="col-md-4">
+    <div class="request_form">
+      <%= render "form_request" %>
+    </div>
+  </aside>
+</div>
+<h1><%= t "title.all_requests" %></h1>
+  <%= render "request" %>
+<%= will_paginate %>
+

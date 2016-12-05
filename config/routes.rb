@@ -15,8 +15,11 @@ Rails.application.routes.draw do
       resources :image_products
     end
     resources :users
+    resources :requests
   end
+  resources :products, only: [:show, :index]
   resources :users, only: :show
+  resources :requests, except: :update
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
