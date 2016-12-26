@@ -7,6 +7,7 @@ class Ability
       user ||= User.new # guest user (not logged in)
       if user.admin?
         can :manage, :all
+        cannot :destroy, Request, is_approved: false
       else
         can :read, :all
         can [:create, :index], Request

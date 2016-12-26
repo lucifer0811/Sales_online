@@ -77,9 +77,11 @@ en:
     request:
       stt: "STT"
       name: "User"
-      content: "Product Name"
+      content: "Product"
       status: "Status"
       create: "Send"
       created: "Request send to Admin"
+      delete: "Delete"
+      check: "Are you sure?"
     products:
       all_product: "Product List"
