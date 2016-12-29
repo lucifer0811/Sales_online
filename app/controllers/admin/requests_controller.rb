@@ -2,7 +2,7 @@ class Admin::RequestsController<ApplicationController
   load_and_authorize_resource
   before_action :load_request, only: [:destroy, :update]
 
-  def show
+  def index
     @requests = Request.all.order(updated_at: :desc).paginate page: params[:page]
   end
 

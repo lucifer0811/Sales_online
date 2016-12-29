@@ -6,6 +6,7 @@
         <li><%= link_to t("layout.header.home"), admin_products_path %></li>
         <% if user_signed_in? %>
           <% if current_user.admin? %>
+          <li><%= link_to t("layout.header.request"), admin_requests_path %></li>
             <li><%= link_to t("layout.header.category"), admin_categories_path %></li>
             <li><%= link_to t("layout.header.product"), admin_products_path %></li>
           <% else %>

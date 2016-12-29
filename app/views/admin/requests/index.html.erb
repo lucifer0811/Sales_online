@@ -1,0 +1,38 @@
+<h1><%= t "title.all_requests" %></h1>
+<% unless @requests.blank? %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><%= t "title.stt" %></th>
+        <th><%= t "views.request.content" %></th>
+        <th><%= t "request.status" %></th>
+        <th><%= t "request.action" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @requests.each_with_index do |request, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= request.product_name %></td>
+          <td class="approve">
+            <% unless request.is_approved %>
+              <%= link_to (t "request.not_approved"), admin_request_path(request), method: :patch %>
+            <% else %>
+              <%= t "request.approved" %>
+            <% end %>
+          </td>
+          <td class="action_request">
+            <% if can? :destroy, request %>
+              <%= link_to [:admin, request],
+                method: :delete, data:{confirm: t("views.request.check")} do %>
+                  <span class= "glyphicon glyphicon-trash text-danger"></span>
+                <% end %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <%= t "request.not_request" %>
+<% end %>
