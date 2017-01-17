@@ -17,6 +17,11 @@ Rails.application.routes.draw do
     resources :users
     resources :requests
   end
+
+  namespace :api do
+    resources :video_callbacks, only: [:create]
+  end
+  resources :videos, only: [:new, :index, :destroy]
   resources :products, only: [:show, :index]
   resources :users, only: :show
   resources :requests, except: :update

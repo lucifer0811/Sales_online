@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
     :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
   has_many :comments
   has_many :requests
+  has_many :videos, dependent: :destroy
   mount_uploader :avatar, PhotoUploader
+  validates :uid, uniqueness: true
 
   def self.new_with_session(params, session)
     super.tap do |user|
@@ -22,4 +24,5 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
     end
   end
+
 end

@@ -14,8 +14,10 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require bootstrap-sprockets
+//= require social-share-button
 //= require_tree .
 //= require request
+//= require videos
 
 function remove_fields(link) {
   $(link).prev("input[type=hidden]").val("1");
