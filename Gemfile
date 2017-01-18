@@ -30,6 +30,7 @@ gem "faker"
 gem "carrierwave"
 # gem "cloudinary"
 gem "mini_magick"
+gem "omniauth-facebook"
 gem "remotipart", "~> 1.2"
 gem "jquery-form-rails"
 # bundle exec rake doc:rails generates the API under doc/api.
