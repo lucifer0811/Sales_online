@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   get "static_pages/about"
 
+  get "/cart" => "cart#index"
+  get "/cart/clear" => "cart#clearCart"
+  get "/cart/:id" => "cart#add"
+
   namespace :admin do
     resources :categories
     resources :products do
@@ -17,7 +21,7 @@ Rails.application.routes.draw do
     resources :users
     resources :requests
   end
-  resources :products, only: [:show, :index]
+  resources :products, only: [:index, :show]
   resources :users, only: :show
   resources :requests, except: :update
 

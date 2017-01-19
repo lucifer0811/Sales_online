@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "227416414836",
+    "firebase_url": "https://send-notification-be4c8.firebaseio.com",
+    "project_id": "send-notification-be4c8",
+    "storage_bucket": "send-notification-be4c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227416414836:android:7195cf0c513573f6",
+        "android_client_info": {
+          "package_name": "com.example.framgia.imarketandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227416414836-rs1ltl21n8dvuqbdhph7jdro7ndgr7ea.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsFEPKH2o6YFToiPNjrqpz4QuH3fZcmdY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

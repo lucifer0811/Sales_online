@@ -26,15 +26,27 @@ en:
     dollar: "$"
     percent: "%"
   hello: "Hello world"
+  cart:
+    quantity: "Quantity"
+    total: "Total"
+    shopping_bag: "YOUR SHOPPING BAG"
+    summary: "SUMMARY"
+    item: "Item"
+  product:
+    order: "Order"
+    price: "Price"
+    name: "Name"
+    add_to_cart: "Add to Cart"
   layout:
     header:
       name_app: "StoreOnline"
-      home: "Home"
+      home: "Shop"
       help: "Help"
       login: "Login"
       logout: "Logout"
       signup: "Signup"
       category: "Category"
+      cart: "Cart"
       update: "Update information"
       product: "Product"
       profile: "Profile"

@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-9" id="detail_cart" >
+    <div id="cart">
+      <%= t "cart.shopping_bag" %>
+    </div><br>
+    <div class="header_cart_details">
+      <%= t ".item" %>(<%= @cart.count %>)
+      <div class="action_cart">
+        <%= link_to "Empty Your Cart", cart_clear_path %>
+      </div>
+    </div>
+    <br>
+    <% total = 0 %>
+    <ul list-style-type: none>
+      <% @cart.each do |id, quantity| %>
+        <% product = Product.find_by_id(id)%>
+        <li>
+        <div class="row">
+          <div class="details_product">
+            <div class="col-md-3">
+              <% if product.image_products.present? %>
+                <%= image_tag(product.image_products.first.image, size: "80x80") %>
+              <% else %>
+                <%= image_tag("image1.jpg", size: "80x80") %>
+              <% end %>
+            </div>
+            <div class="col-md-7">
+              <%= link_to product.name, product %></br >
+            </div>
+            <div class="col-md-2">
+              <p><%= t "cart.quantity" %>: <%= quantity %></p>
+              <p><%= number_to_currency(product.price * quantity, unit: "$") %></p>
+            </div>
+            <% total += quantity * product.price %>
+          </div>
+        </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-md-3" id="summary_cart">
+    <div class="title_bag">
+      <%= t "cart.summary" %>
+    </div>
+    <div class="cart_title">
+      <p><b><%= t "cart.total" %>: </b><%= number_to_currency(total, unit: "$") %></p>
+    </div>
+  </div>
+</div>
+<%= link_to t("product.order"), "#" %>
