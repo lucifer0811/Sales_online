@@ -22,5 +22,6 @@
     <%= f.submit "Log in" %>
   </div>
 
+  <%= link_to t("views.Facebook"), user_facebook_omniauth_authorize_path %>
   <%= render "devise/shared/links" %>
 <% end %>
