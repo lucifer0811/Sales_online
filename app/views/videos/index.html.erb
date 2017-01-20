@@ -1,0 +1,5 @@
+<h1><%= t "views.video.videos"%></h1>
+
+<%= link_to t("views.video.add"), new_video_path %>
+
+<%= render partial: 'video', collection: @videos, as: :video %>

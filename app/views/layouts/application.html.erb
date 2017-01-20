@@ -5,6 +5,10 @@
       "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application",
       "data-turbolinks-track": "reload" %>
+    <link rel="stylesheet" href="//assets-cdn.ziggeo.com/v1-stable/ziggeo.css" />
+    <script src="//assets-cdn.ziggeo.com/v1-stable/ziggeo.js"></script>
+    <script>ZiggeoApi.token = "<%= ENV['ZIGGEO_KEY'] %>";</script>
+
     <%= render "layouts/shim" %>
     <%= csrf_meta_tags %>
   </head>

@@ -45,6 +45,15 @@ en:
       new: "News"
       text: "Website created by"
   views:
+    video:
+      flash:
+        success: "Video removed! It may take some time to reflect changes on the website."
+        warning: "Cannot find such video..."
+      delete: "Delete"
+      duration: "Duration"
+      created: "Created"
+      add: "Add video"
+      videos: "Video"
     admin:
       category:
         all_category: "List Category"
@@ -74,6 +83,7 @@ en:
         comment: "Comments"
         add_comment: "Comment"
         add: "Add Image"
+        share: "Share"
     request:
       stt: "STT"
       name: "User"

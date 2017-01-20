@@ -2,4 +2,5 @@
   <td><%= link_to product.name, product_path(product) %></td>
   <td><%= product.price %><%= t "app.dollar" %></td>
   <td><%= product.sale_off %><%= t "app.percent" %></td>
+  <td><%= social_share_button_tag(product.name) %></td>
 </tr>
